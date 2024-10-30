@@ -17,3 +17,5 @@ print("0x\(String(format:"%X", result.value))")
 ```
 
 In both cases, if the String is composed of more than one scalar or it is empty, the code does not compile.
+
+An analogous macro for named character entities is [CodepointForEntityMacro](https://github.com/stefanspringer1/CodepointForEntityMacro).
