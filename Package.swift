@@ -8,8 +8,8 @@ let package = Package(
     platforms: [.macOS(.v13), .iOS(.v13), .tvOS(.v13), .watchOS(.v6), .macCatalyst(.v13)],
     products: [
         .library(
-            name: "Codepoint",
-            targets: ["Codepoint"]
+            name: "CodepointMacro",
+            targets: ["CodepointMacro"]
         ),
     ],
     dependencies: [
@@ -24,13 +24,13 @@ let package = Package(
             ]
         ),
         .target(
-            name: "Codepoint",
+            name: "CodepointMacro",
             dependencies: ["CodepointMacros"]
         ),
         .testTarget(
-            name: "CodepointTests",
+            name: "MacroTests",
             dependencies: [
-                "CodepointMacros",
+                "CodepointMacro",
                 .product(name: "SwiftSyntaxMacrosTestSupport", package: "swift-syntax"),
             ]
         )
